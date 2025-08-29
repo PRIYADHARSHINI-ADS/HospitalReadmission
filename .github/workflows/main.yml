@@ -24,7 +24,9 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     - name: Deploy to Azure WebApp
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v3
       with:
-        app-name: "myproject-demo"   # your Azure WebApp name
-        package: .
+        app-name: 'Hospital'   # 👈 Your exact app name
+        slot-name: 'production'                 # 👈 Ensure this is "production"
+        package: '.'                            # 👈 Adjust if your build output is elsewhere
+
