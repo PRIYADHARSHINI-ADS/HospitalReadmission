@@ -68,5 +68,7 @@ jobs:
         with:
           app-name: 'Hospital'
           slot-name: 'Production'
+          package: '.'
 
           
+
