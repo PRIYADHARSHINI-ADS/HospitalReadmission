@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.9'
 
       - name: Create and start virtual environment
         run: |
@@ -58,9 +58,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1D7FCABA45564EE28430585A88DE06F7 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4975F04D2765427199C83534CEFDFD40 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_53FECC4373C441B0B79624F93B2B65FF }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_75AFE7A496464EF2AD72579F38131325 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F6079CB5102C4E8086C36C252A5D8FB3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CBD019693D104EAC97FC6FB5F207AA04 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -68,7 +68,4 @@ jobs:
         with:
           app-name: 'Hospital'
           slot-name: 'Production'
-          package: '.'
-
-
-
+          
